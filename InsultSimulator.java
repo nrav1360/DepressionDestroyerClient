@@ -136,19 +136,33 @@ public class InsultSimulator implements ActionListener{
 			if(yomamaON){
 				textfield.setText(set + "Yomama so fat that she lost Weight Watchers to Trump");
 			}
-			if(oldtimeyON){
+			else if(oldtimeyON){
 				textfield.setText(set + "Yer a swashbuckling mongrel donkey");
 			}
-			if(rareON){
+			else if(rareON){
 				textfield.setText(set + "I've never seen a domesticated hippopotomus before");
 			}
-			if(cringeON){
+			else if(cringeON){
 				textfield.setText(set + "Haha, you gay loser :)");
+			}
+			else{
+				textfield.setText(set + "You're a loser");
 			}
 			
 		}
 		if(e.getSource().equals(compliment)){
-			textfield.setText(set + "Sahus is a fun kid");
+			if(yomamaON){
+				textfield.setText(set + "Yomama so nice she baked me a plate of cookies");
+			}
+			if(oldtimeyON){
+				textfield.setText(set + "Yer gon'r succeed with yer endeavors");
+			}
+			if(rareON){
+				textfield.setText(set + "I have never seen someone with such a voluminous brain");
+			}
+			if(cringeON){
+				textfield.setText(set + "Are you from Tennessee. I think you're a 10 haha");
+			}
 		}
 		if(e.getSource().equals(yomama)){
 			if(special){
