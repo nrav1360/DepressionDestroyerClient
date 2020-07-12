@@ -2,8 +2,6 @@ package aarav.programs;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Image;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.text.SimpleAttributeSet;
@@ -55,6 +53,7 @@ public class InsultSimulator implements ActionListener{
 		
 		
 		textfield = new JTextBubble();
+		textfield.setText("\nWelcome to the Insult/Complement Simulator. Choose a generic insult, or a specialized one using the buttons");
 		textfield.setBounds(200, 20, 250, 100); 
 		StyledDocument doc = textfield.getStyledDocument();
 		SimpleAttributeSet center = new SimpleAttributeSet();
@@ -134,7 +133,19 @@ public class InsultSimulator implements ActionListener{
 		// if yomama, choose random yomama insult
 		// if rare, choose random rare insult...
 		if(e.getSource().equals(insult)){
-			textfield.setText(set + "Sahus is a homovariant");
+			if(yomamaON){
+				textfield.setText(set + "Yomama so fat that she lost Weight Watchers to Trump");
+			}
+			if(oldtimeyON){
+				textfield.setText(set + "Yer a swashbuckling mongrel donkey");
+			}
+			if(rareON){
+				textfield.setText(set + "I've never seen a domesticated hippopotomus before");
+			}
+			if(cringeON){
+				textfield.setText(set + "Haha, you gay loser :)");
+			}
+			
 		}
 		if(e.getSource().equals(compliment)){
 			textfield.setText(set + "Sahus is a fun kid");
@@ -149,7 +160,7 @@ public class InsultSimulator implements ActionListener{
 				rareON = false;
 				cringeON = false;		
 			}
-			textfield.setText(set + "Yomama so homovariant that she acts like Sahus");
+		//	textfield.setText(set + "Yomama so homovariant that she acts like Sahus");
 			if(yomama.getForeground().equals(Color.GREEN)){ 
 				yomama.setForeground(Color.red); 
 				special = false; 
@@ -171,21 +182,17 @@ public class InsultSimulator implements ActionListener{
 				rareON = false;
 				cringeON = false;		
 			}
-			textfield.setText(set + "Brah ya bleeding fairy");
+	//		textfield.setText(set + "Brah ya bleeding fairy");
 			if(oldtimey.getForeground().equals(Color.GREEN)){ 
 				oldtimey.setForeground(Color.red); 
 				special = false; 
 				oldtimeyON = false;
-				System.out.println(yomamaON);
-				System.out.println(oldtimeyON);
 				
 			}
 			else { 
 				oldtimey.setForeground(Color.GREEN); 
 				special = true; 
 				oldtimeyON = true;
-				System.out.println(yomamaON);
-				System.out.println(oldtimeyON);
 			}
 		}
 		if(e.getSource().equals(rare)){
@@ -197,7 +204,7 @@ public class InsultSimulator implements ActionListener{
 				oldtimeyON = false;
 				cringeON = false;		
 			}
-			textfield.setText(set + "A green goblin is more energetic then you are");
+	//		textfield.setText(set + "A green goblin is more energetic then you are");
 			if(rare.getForeground().equals(Color.GREEN)){ 
 				rare.setForeground(Color.red); 
 				special = false; 
@@ -218,7 +225,7 @@ public class InsultSimulator implements ActionListener{
 				oldtimeyON = false;
 				rareON = false;	
 			}
-			textfield.setText(set + "You're so lame, you would fall when walking");
+	//		textfield.setText(set + "You're so lame, you would fall when walking");
 			if(cringe.getForeground().equals(Color.GREEN)){ 
 				cringe.setForeground(Color.red); 
 				special = false; 
