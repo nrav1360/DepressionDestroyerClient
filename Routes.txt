@@ -1,0 +1,25 @@
+http://localhost:3000/insult/random
+
+{
+    "message": "You are an insolent, artless rapscallion",
+    "messageType": "insult",
+    "tags": ["old timey"]
+}
+
+http://localhost:3000/insult/list
+
+[
+    {
+        "message": "You are an insolent, artless rapscallion",
+        "messageType": "insult",
+        "tags": ["old timey"]
+    }
+    {
+        "message": "You blithering nincompoop",
+        "messageType": "insult",
+        "tags": ["old timey"]
+    }
+]
+
+http://localhost:3000/compliment/random
+http://localhost:3000/compliment/list
